@@ -4,24 +4,26 @@ import CallButton from "@/components/CallButton";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full bg-[linear-gradient(180deg,#000000_0%,#000000_10%,#7370FF_100%)] overflow-x-hidden">
+    <div className="min-h-screen w-full bg-[#1a1a40] overflow-x-hidden">
       <Navbar />
 
       {/* Spacer for fixed header */}
       <div className="h-24"></div>
 
       {/* Hero Section */}
-      <section className="h-screen w-full flex flex-col items-center justify-center bg-[linear-gradient(180deg,#000000_0%,#000000_10%,#7370FF_100%)] px-4">
+      <section className="h-screen w-full flex flex-col items-center justify-center bg-[linear-gradient(180deg,#1a1a40_0%,#1a1a40_70%,#000000_100%)] px-4">
 
         {/* Headline */}
         <h1 className="max-w-[1050px] text-center font-instrument font-medium text-[40px] md:text-[72px] leading-[1.1] md:leading-[80px] tracking-[-1px] md:tracking-[-3.6px] mb-8 bg-clip-text text-transparent bg-[linear-gradient(135deg,#FFFFFF_0%,#FFFFFF_50%,#9C99FF_100%)]">
-          We help businesses make more revenue with strategy-led websites
+          Transforming Ideas Into Intelligent Digital Experiences
         </h1>
 
         {/* Subheadline */}
-        <p className="max-w-[942px] text-center font-sans text-white text-[18px] md:text-[25px] leading-relaxed mb-12">
-          Your website should print money, not collect dust.<br />
-          We build conversion-focused sites that turn visitors into customers in 4 weeks or less.
+        <p 
+          className="max-w-[942px] text-center text-white text-[18px] md:text-[25px] leading-relaxed md:leading-[35px] mb-12"
+          style={{ fontFamily: 'Aileron, sans-serif' }}
+        >
+          We build cutting-edge websites, mobile apps, and AI-powered automation that drive real business growth. From concept to scale, we're your complete development partner.
         </p>
 
         {/* Call to Action Button */}
@@ -45,18 +47,32 @@ export default function Home() {
           <div className="flex gap-[32px] mb-[28px]">
             {/* Box 1 */}
             <div
-              className="bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer"
+              className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
               style={{ width: '561px', height: '299px' }}
             >
-              {/* Project content here */}
+              <Image
+                src="/project3.png"
+                alt="Project 1"
+                fill
+                sizes="561px"
+                className="object-cover"
+                unoptimized
+              />
             </div>
 
             {/* Box 2 */}
             <div
-              className="bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer"
+              className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
               style={{ width: '764px', height: '379px' }}
             >
-              {/* Project content here */}
+              <Image
+                src="/project2.png"
+                alt="Project 2"
+                fill
+                sizes="764px"
+                className="object-cover"
+                unoptimized
+              />
             </div>
           </div>
 
@@ -64,34 +80,62 @@ export default function Home() {
           <div className="relative" style={{ height: '600px' }}>
             {/* Box 3 */}
             <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer"
+              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
               style={{ width: '571px', height: '308px', top: '0px', left: '0px' }}
             >
-              {/* Project content here */}
+              <Image
+                src="/project1.png"
+                alt="Project 3"
+                fill
+                sizes="571px"
+                className="object-cover"
+                unoptimized
+              />
             </div>
 
             {/* Box 4 */}
             <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer"
+              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
               style={{ width: '444px', height: '289px', top: '75px', left: '596px' }}
             >
-              {/* Project content here */}
+              <Image
+                src="/project4.png"
+                alt="Project 4"
+                fill
+                sizes="444px"
+                className="object-cover"
+                unoptimized
+              />
             </div>
 
             {/* Box 5 */}
             <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer"
+              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
               style={{ width: '355px', height: '496px', top: '80px', left: '1075px' }}
             >
-              {/* Project content here */}
+              <Image
+                src="/project5.png"
+                alt="Project 5"
+                fill
+                sizes="355px"
+                className="object-cover object-top"
+                unoptimized
+              />
             </div>
 
             {/* Box 6 */}
             <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer"
+              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
               style={{ width: '466px', height: '251px', top: '337px', left: '0px' }}
             >
-              {/* Project content here */}
+              <Image
+                src="/project6.jpg"
+                alt="Project 6"
+                fill
+                sizes="466px"
+                className="object-cover"
+                unoptimized
+              />
             </div>
 
             {/* Box 7 */}
@@ -139,33 +183,33 @@ export default function Home() {
               {/* Website Design */}
               <div>
                 <h3 className="font-inter font-semibold text-[25px] leading-[28px] text-white mb-3">
-                  Website Design
+                  Website Design & Development
                 </h3>
                 <p className="font-inter font-normal text-[20px] leading-[24px] text-[#999999]">
-                  Generate site layouts and advanced components in seconds with AI, so you can skip the blank canvas
-                  and start designing with confidence.
+                  Stunning digital storefronts that convert visitors into customers<br />
+                  We craft high-performance websites that blend aesthetics with functionality. Every pixel is purposeful, every interaction intuitive. From landing pages that convert to complex web platforms, we build digital experiences that keep users engaged and drive measurable results.
                 </p>
               </div>
 
               {/* Ecommerce */}
               <div>
                 <h3 className="font-inter font-semibold text-[25px] leading-[28px] text-white mb-3">
-                  Ecommerce
+                  E-Commerce & Web Platforms
                 </h3>
                 <p className="font-inter font-normal text-[20px] leading-[24px] text-[#999999]">
-                  Generate site layouts and advanced components in seconds with AI, so you can skip the blank canvas
-                  and start designing with confidence.
+                  Scalable solutions that turn browsers into buyers<br />
+                  From multi-vendor marketplaces to subscription platforms, we build web systems that scale. Integrated payments, real-time inventory, analytics dashboards—everything you need to run a world-class digital business. Built for growth from day one.
                 </p>
               </div>
 
               {/* Branding */}
               <div>
                 <h3 className="font-inter font-semibold text-[25px] leading-[28px] text-white mb-3">
-                  Branding
+                  Backend Development
                 </h3>
                 <p className="font-inter font-normal text-[20px] leading-[24px] text-[#999999]">
-                  Generate site layouts and advanced components in seconds with AI, so you can skip the blank canvas
-                  and start designing with confidence.
+                  The backbone of your digital empire<br />
+                  Invisible but essential. We architect APIs and databases that handle millions of requests, complex business logic, and enterprise-grade security. Our backend work ensures your application stays fast, reliable, and secure as you scale.
                 </p>
               </div>
 
@@ -201,7 +245,7 @@ export default function Home() {
               className="object-contain"
             />
             <h2 className="font-instrument font-medium text-[48px] leading-[48px] tracking-[-2.4px] text-white">
-              Why you will love us
+              Why you'll love us
             </h2>
           </div>
 
@@ -216,7 +260,7 @@ export default function Home() {
                 </h3>
               </div>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
-                We offer unlimited revisions for a set period to ensure the best results.
+                We refine every detail until you're completely satisfied with the result.
               </p>
             </div>
 
@@ -224,11 +268,11 @@ export default function Home() {
             <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-transparent hover:border-[#7370FF] transition-all">
               <div className="inline-block border-b-2 border-[#7370FF] pb-2 mb-4">
                 <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white">
-                  Fast Turnaround
+                  Lightning-Fast Delivery
                 </h3>
               </div>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
-                Quick execution with updates every 24 to 48 hours and a smooth communication flow.
+                Agile processes mean you get to market quickly without compromising quality.
               </p>
             </div>
 
@@ -236,11 +280,11 @@ export default function Home() {
             <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-transparent hover:border-[#7370FF] transition-all">
               <div className="inline-block border-b-2 border-[#7370FF] pb-2 mb-4">
                 <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white">
-                  Fast Turnaround
+                  Full-Stack Expertise
                 </h3>
               </div>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
-                Quick execution with updates every 24 to 48 hours and a smooth communication flow.
+                One team handles everything—frontend, backend, mobile, AI, automation. No handoffs.
               </p>
             </div>
 
@@ -248,11 +292,11 @@ export default function Home() {
             <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-transparent hover:border-[#7370FF] transition-all">
               <div className="inline-block border-b-2 border-[#7370FF] pb-2 mb-4">
                 <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white">
-                  Everything, one team
+                  Transparent Communication
                 </h3>
               </div>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
-                Branding, websites and e-commerce, all under one roof. One team, zero hassle.
+                Regular updates and clear timelines keep you informed throughout the project.
               </p>
             </div>
 
@@ -442,139 +486,175 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto">
 
           {/* Title */}
-          <h2 className="font-bold text-[48px] md:text-[64px] leading-[100%] text-white text-center mb-6">
+          <h2 className="font-instrument font-medium text-[48px] md:text-[56px] leading-[1.1] text-white text-center mb-4">
             Choose the Plan<br />That's Right for You
           </h2>
 
           {/* Subtitle */}
-          <p className="font-normal text-[18px] md:text-[20px] leading-[24px] text-[#D9D9D9] text-center mb-8 max-w-[780px] mx-auto">
+          <p className="text-center text-[#CCCCCC] text-[15px] md:text-[16px] leading-[24px] max-w-[680px] mx-auto mb-12">
             Giving you access to essential features and over 1,000 creative tools. Upgrade to the Pro Plan to unlock powerful AI capabilities, cloud syncing, and a whole new level of creative freedom.
           </p>
 
-          {/* Monthly/Yearly Toggle */}
-          <div className="flex justify-center gap-2 mb-12">
-            <button className="px-6 py-2 rounded-full bg-white text-black font-semibold text-[14px]">
-              Monthly
-            </button>
-            <button className="px-6 py-2 rounded-full bg-transparent text-white font-semibold text-[14px] border border-[#FFFFFF1A]">
-              Yearly
-            </button>
-          </div>
-
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
 
-            {/* Free Plan */}
-            <div className="bg-[#1B1B1C] border border-[#FFFFFF1A] rounded-tl-[20px] rounded-bl-[20px] md:rounded-bl-[20px] md:rounded-tr-[0px] p-[30px] flex flex-col gap-[35px]">
-              <div>
-                <h3 className="text-white text-[24px] font-semibold mb-3">Free</h3>
-                <p className="text-[#999999] text-[14px] mb-6">Everything you need to supercharge your productivity.</p>
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span className="text-white text-[48px] font-bold">$0</span>
-                  <span className="text-[#999999] text-[16px]">/ month</span>
-                </div>
+            {/* Logo & Branding Plan */}
+            <div className="bg-[#1B1B1C] border border-[#2A2A2B] rounded-[16px] p-8 flex flex-col hover:border-[#7370FF] transition-all">
+              <h3 className="text-white text-[20px] font-semibold mb-2">Logo & Branding</h3>
+              <p className="text-[#999999] text-[14px] leading-[20px] mb-6">
+                For businesses that need a strong brand identity that reflects their vision and justifies premium pricing.
+              </p>
+              
+              <div className="flex items-baseline gap-2 mb-8">
+                <span className="text-white text-[40px] font-bold">$399</span>
               </div>
 
-              <div>
-                <p className="text-white text-[14px] mb-4">What's included</p>
+              <div className="border-t border-[#2A2A2B] pt-6">
+                <p className="text-white text-[14px] font-semibold mb-4">What's Included</p>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    20 design generations/month
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Logo design (3 concepts)</span>
                   </li>
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    Low-res downloads
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Brand colors & fonts</span>
                   </li>
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    Basic style presets
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>2 revision rounds</span>
                   </li>
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    Limited customization options
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Brand style guide</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Marketing collateral templates</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Source files</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Pro Plan */}
-            <div className="relative bg-[#1B1B1C] rounded-[20px] p-[30px] flex flex-col gap-[35px]" style={{ border: '3px solid transparent', backgroundImage: 'linear-gradient(#1B1B1C, #1B1B1C), linear-gradient(180deg, rgba(115, 112, 255, 0.5) 0%, #7370FF 100%)', backgroundOrigin: 'border-box', backgroundClip: 'padding-box, border-box' }}>
-              <div>
-                <h3 className="text-[#7370FF] text-[24px] font-semibold mb-3">Pro</h3>
-                <p className="text-[#999999] text-[14px] mb-6">Unlock a new level of your personal productivity.</p>
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-white text-[48px] font-bold">$17</span>
-                  <span className="text-[#999999] text-[16px]">/ month</span>
-                  <span className="bg-[#7370FF] text-white text-[12px] px-3 py-1 rounded-full">-20%</span>
-                </div>
+            {/* High-Converting Landing Page Plan - Featured */}
+            <div className="bg-[#1B1B1C] border-2 border-[#7370FF] rounded-[16px] p-8 flex flex-col relative">
+              <h3 className="text-white text-[20px] font-semibold mb-2">High-Converting Landing Page</h3>
+              <p className="text-[#999999] text-[14px] leading-[20px] mb-6">
+                For businesses launching products, testing offers or validating ideas fast without waiting weeks.
+              </p>
+              
+              <div className="flex items-baseline gap-2 mb-8">
+                <span className="text-white text-[40px] font-bold">$1499</span>
               </div>
 
-              <div>
-                <p className="text-white text-[14px] mb-4">What's included</p>
+              <div className="border-t border-[#2A2A2B] pt-6">
+                <p className="text-white text-[14px] font-semibold mb-4">What's Included</p>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-2 text-white text-[14px]">
-                    <span className="w-5 h-5 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[12px]">✓</span>
-                    Everything in Free
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-[#7370FF] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Strategy & discovery session</span>
                   </li>
-                  <li className="flex items-center gap-2 text-white text-[14px]">
-                    <span className="w-5 h-5 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[12px]">✓</span>
-                    Enigma AI
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-[#7370FF] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Conversion copywriting</span>
                   </li>
-                  <li className="flex items-center gap-2 text-white text-[14px]">
-                    <span className="w-5 h-5 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[12px]">✓</span>
-                    Unlimited design generations
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-[#7370FF] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Mobile-optimized design</span>
                   </li>
-                  <li className="flex items-center gap-2 text-white text-[14px]">
-                    <span className="w-5 h-5 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[12px]">✓</span>
-                    Custom Themes
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-[#7370FF] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Unlimited revisions</span>
                   </li>
-                  <li className="flex items-center gap-2 text-white text-[14px]">
-                    <span className="w-5 h-5 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[12px]">✓</span>
-                    High-resolution exports
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-[#7370FF] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Analytics setup</span>
                   </li>
-                  <li className="flex items-center gap-2 text-white text-[14px]">
-                    <span className="w-5 h-5 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[12px]">✓</span>
-                    Custom Extensions
-                  </li>
-                  <li className="flex items-center gap-2 text-white text-[14px]">
-                    <span className="w-5 h-5 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[12px]">✓</span>
-                    Developer Tools
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-[#7370FF] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>48-hour response time</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* Team Plan */}
-            <div className="bg-[#1B1B1C] border border-[#FFFFFF1A] rounded-tr-[20px] rounded-br-[20px] md:rounded-tl-[0px] md:rounded-tr-[20px] p-[30px] flex flex-col gap-[35px]">
-              <div>
-                <h3 className="text-white text-[24px] font-semibold mb-3">Team</h3>
-                <p className="text-[#999999] text-[14px] mb-6">Everything you need to supercharge your productivity.</p>
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-white text-[48px] font-bold">$37</span>
-                  <span className="text-[#999999] text-[16px]">/ month</span>
-                  <span className="bg-[#7370FF] text-white text-[12px] px-3 py-1 rounded-full">-20%</span>
-                </div>
+            {/* Websites & E-Commerce Plan */}
+            <div className="bg-[#1B1B1C] border border-[#2A2A2B] rounded-[16px] p-8 flex flex-col hover:border-[#7370FF] transition-all">
+              <h3 className="text-white text-[20px] font-semibold mb-2">Websites & E-Commerce</h3>
+              <p className="text-[#999999] text-[14px] leading-[20px] mb-6">
+                For businesses that need a website or online store that actually converts browsers into buyers.
+              </p>
+              
+              <div className="flex items-baseline gap-2 mb-8">
+                <span className="text-white text-[40px] font-bold">$3699</span>
               </div>
 
-              <div>
-                <p className="text-white text-[14px] mb-4">What's included</p>
+              <div className="border-t border-[#2A2A2B] pt-6">
+                <p className="text-white text-[14px] font-semibold mb-4">What's Included</p>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    Everything in Free
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Strategy & discovery session</span>
                   </li>
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    Unlimited Shared Commands
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Up to 5-10 pages</span>
                   </li>
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    Unlimited Shared Quicklinks
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Conversion copywriting</span>
                   </li>
-                  <li className="flex items-center gap-2 text-[#999999] text-[14px]">
-                    <span className="w-5 h-5 rounded-full border border-[#999999] flex items-center justify-center">✓</span>
-                    Priority support
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Development (Framer, Next.js, Shopify)</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Mobile-optimized & fast loading</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
+                    <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>48-hour response time</span>
                   </li>
                 </ul>
               </div>
