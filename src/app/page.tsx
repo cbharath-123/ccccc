@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import CallButton from "@/components/CallButton";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
@@ -34,11 +35,13 @@ export default function Home() {
       {/* Projects Section */}
       <section className="w-full bg-black py-20">
         {/* Title */}
-        <div className="flex justify-center items-center mt-[100px] mb-[50px]">
-          <h2 className="font-instrument font-medium text-[48px] md:text-[72px] leading-[72px] tracking-[-3.6px] bg-clip-text text-transparent bg-[linear-gradient(117.11deg,#9C99FF_25.56%,#FFFFFF_30.53%,#FFFFFF_47.75%,#9C99FF_73.19%,#9C99FF_82.2%)]">
-            OUR PROJECTS
-          </h2>
-        </div>
+        <FadeIn>
+          <div className="flex justify-center items-center mt-[100px] mb-[50px]">
+            <h2 className="font-instrument font-medium text-[48px] md:text-[72px] leading-[72px] tracking-[-3.6px] bg-clip-text text-transparent bg-[linear-gradient(117.11deg,#9C99FF_25.56%,#FFFFFF_30.53%,#FFFFFF_47.75%,#9C99FF_73.19%,#9C99FF_82.2%)]">
+              OUR PROJECTS
+            </h2>
+          </div>
+        </FadeIn>
 
         {/* Projects Grid - Desktop Layout */}
         <div className="hidden lg:block relative w-full max-w-[1472px] mx-auto px-4">
@@ -138,12 +141,17 @@ export default function Home() {
               />
             </div>
 
-            {/* Box 7 */}
+            {/* Box 7 - Agency Message */}
             <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer"
+              className="absolute bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-[14px] border border-[#7370FF] shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.5)] transition-all flex flex-col items-center justify-center p-8 text-center"
               style={{ width: '548px', height: '195px', top: '393px', left: '494px' }}
             >
-              {/* Project content here */}
+              <h3 className="font-instrument font-semibold text-[28px] leading-[32px] tracking-[-1px] bg-clip-text text-transparent bg-gradient-to-r from-[#FFFFFF] via-[#9C99FF] to-[#FFFFFF] mb-3">
+                Crafting Digital Excellence
+              </h3>
+              <p className="font-inter text-[15px] leading-[22px] text-[#CCCCCC] max-w-[450px]">
+                Where strategy meets artistry. We transform ambitious visions into unforgettable digital experiences.
+              </p>
             </div>
           </div>
 
@@ -170,15 +178,18 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto">
 
           {/* Title */}
-          <h2 className="font-instrument font-medium text-[48px] leading-[48px] tracking-[-2.4px] text-white mb-12">
-            Services we offer.
-          </h2>
+          <FadeIn>
+            <h2 className="font-instrument font-medium text-[48px] leading-[48px] tracking-[-2.4px] text-white mb-12">
+              Services we offer.
+            </h2>
+          </FadeIn>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
             {/* Left Column - Services List */}
-            <div className="space-y-8">
+            <FadeIn delay={0.2} direction="left">
+              <div className="space-y-8">
 
               {/* Website Design */}
               <div>
@@ -202,29 +213,64 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Branding */}
+              {/* Calendly & Integrations */}
               <div>
                 <h3 className="font-inter font-semibold text-[25px] leading-[28px] text-white mb-3">
-                  Backend Development
+                  Calendly & Smart Integrations
                 </h3>
                 <p className="font-inter font-normal text-[20px] leading-[24px] text-[#999999]">
-                  The backbone of your digital empire<br />
-                  Invisible but essential. We architect APIs and databases that handle millions of requests, complex business logic, and enterprise-grade security. Our backend work ensures your application stays fast, reliable, and secure as you scale.
+                  Seamless scheduling and automation for your business<br />
+                  We integrate Calendly and other powerful tools directly into your website, automating appointment bookings, client communications, and workflows. From scheduling to payment processing, we connect the tools you need so your business runs on autopilot.
                 </p>
               </div>
 
             </div>
+            </FadeIn>
 
-            {/* Right Column - Image */}
-            <div className="flex justify-center lg:justify-end">
-              <Image
-                src="/services-image.jpg"
-                alt="Services showcase"
-                width={600}
-                height={400}
-                className="rounded-lg object-cover"
-              />
+            {/* Right Column - Custom Gradient Visual */}
+            <FadeIn delay={0.4} direction="right">
+              <div className="flex justify-center lg:justify-end">
+              <div className="relative w-[600px] h-[400px] rounded-lg overflow-hidden">
+                {/* Animated Gradient Background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#7370FF] via-[#9C99FF] to-[#1a1a40] opacity-90"></div>
+                
+                {/* Floating Orbs */}
+                <div className="absolute top-[10%] left-[15%] w-[120px] h-[120px] bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+                <div className="absolute bottom-[20%] right-[10%] w-[180px] h-[180px] bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+                <div className="absolute top-[50%] right-[30%] w-[100px] h-[100px] bg-blue-300/15 rounded-full blur-2xl animate-pulse delay-1000"></div>
+                
+                {/* Grid Pattern Overlay */}
+                <div className="absolute inset-0 opacity-10" style={{
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                  backgroundSize: '40px 40px'
+                }}></div>
+                
+                {/* Code Snippet Visual */}
+                <div className="absolute top-[15%] left-[10%] bg-black/40 backdrop-blur-sm rounded-lg p-4 border border-white/10 max-w-[280px]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                  </div>
+                  <div className="space-y-2 font-mono text-xs">
+                    <div className="text-purple-300">{'<div className="app">'}</div>
+                    <div className="text-blue-300 ml-4">{'  <Header />'}</div>
+                    <div className="text-green-300 ml-4">{'  <Content />'}</div>
+                    <div className="text-purple-300">{'</div>'}</div>
+                  </div>
+                </div>
+                
+                {/* Stats Card */}
+                <div className="absolute bottom-[15%] right-[8%] bg-white/5 backdrop-blur-md rounded-lg p-4 border border-white/20 min-w-[180px]">
+                  <div className="text-white/60 text-xs mb-1">Performance</div>
+                  <div className="text-white text-2xl font-bold mb-1">98<span className="text-sm text-purple-300">/100</span></div>
+                  <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-full w-[98%] bg-gradient-to-r from-purple-400 to-green-400 rounded-full"></div>
+                  </div>
+                </div>
+              </div>
             </div>
+            </FadeIn>
 
           </div>
 
@@ -236,247 +282,67 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto">
 
           {/* Title with Vector Icon */}
-          <div className="flex items-center justify-center gap-4 mb-16">
-            <Image
-              src="/vector-icon.png"
-              alt="Vector Icon"
-              width={48}
-              height={48}
-              className="object-contain"
-            />
-            <h2 className="font-instrument font-medium text-[48px] leading-[48px] tracking-[-2.4px] text-white">
-              Why you'll love us
-            </h2>
-          </div>
+          <FadeIn>
+            <div className="flex items-center justify-center gap-4 mb-16">
+              <Image
+                src="/vector-icon.png"
+                alt="Vector Icon"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
+              <h2 className="font-instrument font-medium text-[48px] leading-[48px] tracking-[-2.4px] text-white">
+                Why you'll love us
+              </h2>
+            </div>
+          </FadeIn>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1157px] mx-auto">
+          <FadeIn delay={0.2}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1157px] mx-auto">
 
             {/* Box 1 - Unlimited Revisions */}
-            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-transparent hover:border-[#7370FF] transition-all">
-              <div className="inline-block border-b-2 border-[#7370FF] pb-2 mb-4">
-                <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white">
-                  Unlimited Revisions
-                </h3>
-              </div>
+            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-[#2A2A2B] hover:border-[#7370FF] transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0px_20px_60px_rgba(115,112,255,0.4)] cursor-pointer">
+              <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white mb-4">
+                Unlimited Revisions
+              </h3>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
                 We refine every detail until you're completely satisfied with the result.
               </p>
             </div>
 
             {/* Box 2 - Fast Turnaround */}
-            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-transparent hover:border-[#7370FF] transition-all">
-              <div className="inline-block border-b-2 border-[#7370FF] pb-2 mb-4">
-                <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white">
-                  Lightning-Fast Delivery
-                </h3>
-              </div>
+            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-[#2A2A2B] hover:border-[#7370FF] transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0px_20px_60px_rgba(115,112,255,0.4)] cursor-pointer">
+              <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white mb-4">
+                Lightning-Fast Delivery
+              </h3>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
                 Agile processes mean you get to market quickly without compromising quality.
               </p>
             </div>
 
             {/* Box 3 - Fast Turnaround */}
-            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-transparent hover:border-[#7370FF] transition-all">
-              <div className="inline-block border-b-2 border-[#7370FF] pb-2 mb-4">
-                <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white">
-                  Full-Stack Expertise
-                </h3>
-              </div>
+            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-[#2A2A2B] hover:border-[#7370FF] transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0px_20px_60px_rgba(115,112,255,0.4)] cursor-pointer">
+              <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white mb-4">
+                Full-Stack Expertise
+              </h3>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
                 One team handles everything—frontend, backend, mobile, AI, automation. No handoffs.
               </p>
             </div>
 
             {/* Box 4 - Everything, one team */}
-            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-transparent hover:border-[#7370FF] transition-all">
-              <div className="inline-block border-b-2 border-[#7370FF] pb-2 mb-4">
-                <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white">
-                  Transparent Communication
-                </h3>
-              </div>
+            <div className="bg-[rgba(255,255,255,0.01)] rounded-[14px] p-8 border border-[#2A2A2B] hover:border-[#7370FF] transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0px_20px_60px_rgba(115,112,255,0.4)] cursor-pointer">
+              <h3 className="font-instrument font-medium text-[32px] leading-[36px] text-white mb-4">
+                Transparent Communication
+              </h3>
               <p className="font-inter font-normal text-[18px] leading-[24px] text-[#999999]">
                 Regular updates and clear timelines keep you informed throughout the project.
               </p>
             </div>
 
           </div>
-
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="w-full bg-black py-20 px-4">
-        <div className="max-w-[1200px] mx-auto">
-
-          {/* Title */}
-          <h2 className="font-instrument font-bold text-[48px] leading-[48px] tracking-[-2.4px] text-white text-center mb-4">
-            What people are saying
-          </h2>
-
-          {/* Subtitle */}
-          <p className="font-inter font-normal text-[17.6px] leading-[28px] text-[#999999] text-center mb-16">
-            Thousands of developers and teams love Reweb.
-          </p>
-
-          {/* Desktop Masonry Layout */}
-          <div className="hidden md:block relative mx-auto" style={{ maxWidth: '1136px', height: '617px' }}>
-
-            {/* Box 1 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '200px', top: '0px', left: '0px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                It practically solves every issue I have with Webflow and Framer. This is so much easier to use as a developer!
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar1.png" alt="Jaiden Lee" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">Jaiden Lee</p>
-                  <p className="text-gray-400 text-[12px]">@buildjaiden</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 2 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '152px', top: '0px', left: '384px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                Amazing.
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar2.png" alt="shadcn" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">shadcn</p>
-                  <p className="text-gray-400 text-[12px]">@shadcn</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 3 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '200px', top: '0px', left: '768px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                I really have been missing this product for years. It feels like a much more natural way of working.
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar3.png" alt="Ninjanordbo" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">Ninjanordbo</p>
-                  <p className="text-gray-400 text-[12px]">@ninjanordbo</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 4 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '152px', top: '220px', left: '0px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                This looks really freaking cool!!
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar4.png" alt="James Q Quick" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">James Q Quick</p>
-                  <p className="text-gray-400 text-[12px]">@jamesqquick</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 5 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '224px', top: '168px', left: '384px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                This is awesome. Better than Framer/Wordpress as you can take the code and continue working on it instantly yourself.
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar5.png" alt="soumya dot dev" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">soumya dot dev</p>
-                  <p className="text-gray-400 text-[12px]">@geekysrm</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 6 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '152px', top: '220px', left: '768px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                This is so tastefully built. Loving it.
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar6.png" alt="Kabir Asani" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">Kabir Asani</p>
-                  <p className="text-gray-400 text-[12px]">@KabirAsani</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 7 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '200px', top: '392px', left: '0px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                Absolutely love Reweb! Such a game-changer for building beautiful landing pages effortlessly.
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar7.png" alt="Wayne" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">Wayne</p>
-                  <p className="text-gray-400 text-[12px]">@wayne_dev</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 8 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '200px', top: '408px', left: '384px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                This is super cool! Very easy to use, and better than trying to mock things up in Figma.
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar8.png" alt="Mike Knapp" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">Mike Knapp</p>
-                  <p className="text-gray-400 text-[12px]">@mikeee</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 9 */}
-            <div className="absolute bg-[#1a1a1a] rounded-[16px] p-6" style={{ width: '368px', height: '176px', top: '392px', left: '768px' }}>
-              <p className="text-white text-[15px] leading-[22px] mb-4">
-                This is my new favorite way of building projects quickly.
-              </p>
-              <div className="flex items-center gap-3">
-                <Image src="/avatar9.png" alt="Paul Bratslavsky" width={40} height={40} className="rounded-full" />
-                <div>
-                  <p className="text-white font-semibold text-[14px]">Paul Bratslavsky</p>
-                  <p className="text-gray-400 text-[12px]">@codingthirty</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Mobile Responsive Grid */}
-          <div className="block md:hidden space-y-4">
-            {[
-              { text: "It practically solves every issue I have with Webflow and Framer. This is so much easier to use as a developer!", name: "Jaiden Lee", handle: "@buildjaiden", avatar: "/avatar1.png" },
-              { text: "Amazing.", name: "shadcn", handle: "@shadcn", avatar: "/avatar2.png" },
-              { text: "I really have been missing this product for years. It feels like a much more natural way of working.", name: "Ninjanordbo", handle: "@ninjanordbo", avatar: "/avatar3.png" },
-              { text: "This looks really freaking cool!!", name: "James Q Quick", handle: "@jamesqquick", avatar: "/avatar4.png" },
-              { text: "This is awesome. Better than Framer/Wordpress as you can take the code and continue working on it instantly yourself.", name: "soumya dot dev", handle: "@geekysrm", avatar: "/avatar5.png" },
-              { text: "This is so tastefully built. Loving it.", name: "Kabir Asani", handle: "@KabirAsani", avatar: "/avatar6.png" },
-              { text: "Absolutely love Reweb! Such a game-changer for building beautiful landing pages effortlessly.", name: "Wayne", handle: "@wayne_dev", avatar: "/avatar7.png" },
-              { text: "This is super cool! Very easy to use, and better than trying to mock things up in Figma.", name: "Mike Knapp", handle: "@mikeee", avatar: "/avatar8.png" },
-              { text: "This is my new favorite way of building projects quickly.", name: "Paul Bratslavsky", handle: "@codingthirty", avatar: "/avatar9.png" },
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-[#1a1a1a] rounded-[16px] p-6">
-                <p className="text-white text-[15px] leading-[22px] mb-4">
-                  {testimonial.text}
-                </p>
-                <div className="flex items-center gap-3">
-                  <Image src={testimonial.avatar} alt={testimonial.name} width={40} height={40} className="rounded-full" />
-                  <div>
-                    <p className="text-white font-semibold text-[14px]">{testimonial.name}</p>
-                    <p className="text-gray-400 text-[12px]">{testimonial.handle}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          </FadeIn>
 
         </div>
       </section>
@@ -486,30 +352,42 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto">
 
           {/* Title */}
-          <h2 className="font-instrument font-medium text-[48px] md:text-[56px] leading-[1.1] text-white text-center mb-4">
-            Choose the Plan<br />That's Right for You
-          </h2>
+          <FadeIn>
+            <h2 className="font-instrument font-medium text-[48px] md:text-[56px] leading-[1.1] text-white text-center mb-4">
+              Choose the Plan<br />That's Right for You
+            </h2>
 
-          {/* Subtitle */}
-          <p className="text-center text-[#CCCCCC] text-[15px] md:text-[16px] leading-[24px] max-w-[680px] mx-auto mb-12">
-            Giving you access to essential features and over 1,000 creative tools. Upgrade to the Pro Plan to unlock powerful AI capabilities, cloud syncing, and a whole new level of creative freedom.
-          </p>
+            {/* Subtitle */}
+            <p className="text-center text-[#CCCCCC] text-[15px] md:text-[16px] leading-[24px] max-w-[680px] mx-auto mb-12">
+              Giving you access to essential features and over 1,000 creative tools. Upgrade to the Pro Plan to unlock powerful AI capabilities, cloud syncing, and a whole new level of creative freedom.
+            </p>
+          </FadeIn>
 
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+          <FadeIn delay={0.3}>
+            <div className="flex flex-col md:flex-row justify-center items-center max-w-[1200px] mx-auto">
 
-            {/* Logo & Branding Plan */}
-            <div className="bg-[#1B1B1C] border border-[#2A2A2B] rounded-[16px] p-8 flex flex-col hover:border-[#7370FF] transition-all">
+            {/* Logo & Branding Plan - Left Card */}
+            <div 
+              className="bg-[#1B1B1C] border border-[#FFFFFF1A] rounded-tl-[20px] rounded-bl-[20px] rounded-tr-none rounded-br-none md:rounded-tl-[20px] md:rounded-bl-[20px] md:rounded-tr-none md:rounded-br-none flex flex-col transition-all duration-300 hover:bg-[#232324] cursor-pointer self-center"
+              style={{ 
+                width: '100%',
+                maxWidth: '400px',
+                minHeight: '454px',
+                gap: '35px',
+                padding: '20px 30px'
+              }}
+            >
               <h3 className="text-white text-[20px] font-semibold mb-2">Logo & Branding</h3>
-              <p className="text-[#999999] text-[14px] leading-[20px] mb-6">
+              <p className="text-[#999999] text-[14px] leading-[20px] mb-4">
                 For businesses that need a strong brand identity that reflects their vision and justifies premium pricing.
               </p>
               
-              <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-white text-[40px] font-bold">$399</span>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-white text-[48px] font-bold">$399</span>
               </div>
 
-              <div className="border-t border-[#2A2A2B] pt-6">
+              <div className="border-t border-[#FFFFFF1A] pt-6">
                 <p className="text-white text-[14px] font-semibold mb-4">What's Included</p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
@@ -552,18 +430,34 @@ export default function Home() {
               </div>
             </div>
 
-            {/* High-Converting Landing Page Plan - Featured */}
-            <div className="bg-[#1B1B1C] border-2 border-[#7370FF] rounded-[16px] p-8 flex flex-col relative">
+            {/* High-Converting Landing Page Plan - Featured Middle Card */}
+            <div 
+              className="relative bg-[#1B1B1C] rounded-[20px] flex flex-col z-10 transition-all duration-300 hover:shadow-[0px_0px_40px_rgba(115,112,255,0.3)] cursor-pointer"
+              style={{ 
+                width: '100%',
+                maxWidth: '400px',
+                minHeight: '582px',
+                gap: '35px',
+                padding: '20px 30px',
+                border: '3px solid transparent',
+                background: 'linear-gradient(#1B1B1C, #1B1B1C) padding-box, linear-gradient(180deg, rgba(115, 112, 255, 0.5) 0%, #7370FF 100%) border-box'
+              }}
+            >
+              {/* Pro Label */}
+              <div className="flex items-center gap-2">
+                <span className="text-[#7370FF] text-[24px] font-bold">Pro</span>
+              </div>
+              
               <h3 className="text-white text-[20px] font-semibold mb-2">High-Converting Landing Page</h3>
-              <p className="text-[#999999] text-[14px] leading-[20px] mb-6">
+              <p className="text-[#999999] text-[14px] leading-[20px] mb-4">
                 For businesses launching products, testing offers or validating ideas fast without waiting weeks.
               </p>
               
-              <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-white text-[40px] font-bold">$1499</span>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-white text-[48px] font-bold">$1499</span>
               </div>
 
-              <div className="border-t border-[#2A2A2B] pt-6">
+              <div className="border-t border-[#FFFFFF1A] pt-6">
                 <p className="text-white text-[14px] font-semibold mb-4">What's Included</p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
@@ -606,18 +500,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Websites & E-Commerce Plan */}
-            <div className="bg-[#1B1B1C] border border-[#2A2A2B] rounded-[16px] p-8 flex flex-col hover:border-[#7370FF] transition-all">
+            {/* Websites & E-Commerce Plan - Right Card */}
+            <div 
+              className="bg-[#1B1B1C] border border-[#FFFFFF1A] rounded-tr-[20px] rounded-br-[20px] rounded-tl-none rounded-bl-none md:rounded-tr-[20px] md:rounded-br-[20px] md:rounded-tl-none md:rounded-bl-none flex flex-col transition-all duration-300 hover:bg-[#232324] cursor-pointer self-center"
+              style={{ 
+                width: '100%',
+                maxWidth: '400px',
+                minHeight: '454px',
+                gap: '35px',
+                padding: '20px 30px'
+              }}
+            >
               <h3 className="text-white text-[20px] font-semibold mb-2">Websites & E-Commerce</h3>
-              <p className="text-[#999999] text-[14px] leading-[20px] mb-6">
+              <p className="text-[#999999] text-[14px] leading-[20px] mb-4">
                 For businesses that need a website or online store that actually converts browsers into buyers.
               </p>
               
-              <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-white text-[40px] font-bold">$3699</span>
+              <div className="flex items-baseline gap-2 mb-6">
+                <span className="text-white text-[48px] font-bold">$3699</span>
               </div>
 
-              <div className="border-t border-[#2A2A2B] pt-6">
+              <div className="border-t border-[#FFFFFF1A] pt-6">
                 <p className="text-white text-[14px] font-semibold mb-4">What's Included</p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3 text-[#CCCCCC] text-[14px]">
@@ -661,6 +564,7 @@ export default function Home() {
             </div>
 
           </div>
+          </FadeIn>
 
         </div>
       </section>
@@ -668,6 +572,8 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="w-full bg-black py-20 px-4">
         <div className="max-w-[1200px] mx-auto">
+
+          <FadeIn>
 
           {/* Title */}
           <h2 className="font-instrument font-medium text-[48px] leading-[48px] tracking-[-2.4px] text-white text-center mb-4">
@@ -678,9 +584,11 @@ export default function Home() {
           <p className="font-inter font-normal text-[17.6px] leading-[28px] text-[#999999] text-center mb-12">
             Got other questions? Reach out in our<span className="font-semibold text-[#999999]">Discord</span>.
           </p>
+          </FadeIn>
 
           {/* FAQ Items */}
-          <div className="max-w-[768px] mx-auto space-y-4">
+          <FadeIn delay={0.2}>
+            <div className="max-w-[768px] mx-auto space-y-4">
 
             {/* FAQ Item 1 */}
             <div className="bg-[#1a1a1a] rounded-[12px] p-6 flex items-center gap-4 hover:bg-[#222222] transition-all cursor-pointer">
@@ -733,6 +641,8 @@ export default function Home() {
             </div>
 
           </div>
+          </FadeIn>
+
 
         </div>
       </section>
