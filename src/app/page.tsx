@@ -160,14 +160,81 @@ export default function Home() {
         {/* Mobile/Tablet Responsive Grid */}
         <div className="block lg:hidden px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7].map((box) => (
-              <div
-                key={box}
-                className="bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px]"
-              >
-                {/* Project content here */}
-              </div>
-            ))}
+            {/* Project 1 */}
+            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
+              <Image
+                src="/project3.png"
+                alt="Project 1"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            {/* Project 2 */}
+            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
+              <Image
+                src="/project2.png"
+                alt="Project 2"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            {/* Project 3 */}
+            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
+              <Image
+                src="/project1.png"
+                alt="Project 3"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            {/* Project 4 */}
+            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
+              <Image
+                src="/project4.png"
+                alt="Project 4"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            {/* Project 5 */}
+            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
+              <Image
+                src="/project5.png"
+                alt="Project 5"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-top"
+                unoptimized
+              />
+            </div>
+            {/* Project 6 */}
+            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
+              <Image
+                src="/project6.jpg"
+                alt="Project 6"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            {/* Agency Message Box */}
+            <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-[14px] border border-[#7370FF] shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.5)] transition-all flex flex-col items-center justify-center p-6 text-center h-[250px]">
+              <h3 className="font-instrument font-semibold text-[22px] leading-[28px] tracking-[-1px] bg-clip-text text-transparent bg-gradient-to-r from-[#FFFFFF] via-[#9C99FF] to-[#FFFFFF] mb-3">
+                Crafting Digital Excellence
+              </h3>
+              <p className="font-inter text-[14px] leading-[20px] text-[#CCCCCC]">
+                Where strategy meets artistry. We transform ambitious visions into unforgettable digital experiences.
+              </p>
+            </div>
           </div>
         </div>
 
