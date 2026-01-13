@@ -27,8 +27,10 @@ export default function Home() {
           We build cutting-edge websites, mobile apps, and AI-powered automation that drive real business growth. From concept to scale, we're your complete development partner.
         </p>
 
-        {/* Call to Action Button */}
-        <CallButton />
+        {/* Call to Action Button - Hidden on mobile, visible on desktop */}
+        <div className="hidden md:block">
+          <CallButton />
+        </div>
 
       </section>
 

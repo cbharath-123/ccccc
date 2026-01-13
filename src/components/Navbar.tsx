@@ -21,10 +21,10 @@ export default function Navbar() {
                     />
                 </div>
 
-                {/* CTA Button */}
+                {/* CTA Button - Hidden on mobile, visible on desktop */}
                 <button 
                     onClick={openCalendly}
-                    className="glass-navbar glass-border relative w-[161px] h-[43px] flex items-center justify-center text-white text-sm font-medium transition-transform hover:scale-105">
+                    className="hidden md:flex glass-navbar glass-border relative w-[161px] h-[43px] items-center justify-center text-white text-sm font-medium transition-transform hover:scale-105">
                     Book Strategy Call
                 </button>
             </div>
