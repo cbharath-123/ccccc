@@ -27,7 +27,15 @@ export default function Home() {
           We build cutting-edge websites, mobile apps, and AI-powered automation that drive real business growth. From concept to scale, we're your complete development partner.
         </p>
 
-        {/* Call to Action Button - Hidden on mobile, visible on desktop */}
+        {/* Mobile Button - "Call us" */}
+        <button 
+          className="md:hidden glass-navbar glass-border relative w-[161px] h-[43px] flex items-center justify-center text-white text-sm font-medium transition-transform hover:scale-105"
+          onClick={() => window.location.href = 'tel:+1234567890'}
+        >
+          Call us
+        </button>
+
+        {/* Desktop Button - "Book Strategy Call" */}
         <div className="hidden md:block">
           <CallButton />
         </div>
