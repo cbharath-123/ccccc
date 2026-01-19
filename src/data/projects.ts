@@ -41,9 +41,11 @@ export const projects: Project[] = [
     shortDescription: "A high-performance e-commerce platform designed for fashion retail. Features real-time inventory management, seamless payment integration, and a mobile-first shopping experience.",
     fullDescription:
       "Fast&Fab is a comprehensive e-commerce solution designed for the fashion industry. Features include product catalog management, secure payment processing, order tracking, and customer management system.",
-    image: "/project1.png",
+    image: "/akkshara.png",
     tags: ["React", "Node.js", "NeonDB", "Cashfree Payment Gateway", "Tailwind CSS"],
     link: "#",
+    objectFit: "contain",
+    backgroundColor: "#ffffff",
   },
   {
     id: "chatbot-ai",
