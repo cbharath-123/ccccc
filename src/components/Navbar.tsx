@@ -8,7 +8,7 @@ export default function Navbar() {
 
     return (
         <nav className="absolute top-[22px] left-0 right-0 z-50 px-4">
-            <div className="mx-auto max-w-[1367px] w-full h-[75px] glass-navbar glass-border flex items-center justify-between px-6 md:px-10 shadow-[0px_16px_64px_0px_#6801FF1F]">
+            <div className="mx-auto max-w-[1367px] w-full h-[75px] glass-navbar glass-border flex items-center justify-center md:justify-between px-6 md:px-10 shadow-[0px_16px_64px_0px_#6801FF1F]">
 
                 {/* Logo Section */}
                 <div className="flex items-center">

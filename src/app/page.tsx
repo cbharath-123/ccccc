@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import CallButton from "@/components/CallButton";
 import FadeIn from "@/components/FadeIn";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
@@ -47,208 +48,86 @@ export default function Home() {
       <section className="w-full bg-black py-20">
         {/* Title */}
         <FadeIn>
-          <div className="flex justify-center items-center mt-[100px] mb-[50px]">
+          <div className="flex justify-center items-center mt-[100px] mb-[60px]">
             <h2 className="font-instrument font-medium text-[48px] md:text-[72px] leading-[72px] tracking-[-3.6px] bg-clip-text text-transparent bg-[linear-gradient(117.11deg,#9C99FF_25.56%,#FFFFFF_30.53%,#FFFFFF_47.75%,#9C99FF_73.19%,#9C99FF_82.2%)]">
               OUR PROJECTS
             </h2>
           </div>
         </FadeIn>
 
-        {/* Projects Grid - Desktop Layout */}
-        <div className="hidden lg:block relative w-full max-w-[1472px] mx-auto px-4">
+        <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {projects.map((project, index) => (
+              <FadeIn key={project.id} delay={index * 0.1} className="flex h-full">
+                {/* Project Card */}
+                <div
+                  className="group bg-[#0a0a0a] rounded-[14px] border border-[#1a1a1a] overflow-hidden
+                             shadow-[0px_0px_0px_4px_rgba(115,112,255,0.15)]
+                             hover:shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)]
+                             hover:border-[#7370ff]/30
+                             transition-all duration-300 ease-out
+                             cursor-pointer hover:-translate-y-1
+                             flex flex-col w-full h-full"
+                >
+                  {/* Image Container */}
+                  <div 
+                    className="relative w-full h-[300px] bg-[#111] overflow-hidden"
+                    style={{ backgroundColor: project.backgroundColor || '#111' }}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className={`${project.objectFit === 'contain' ? 'object-contain' : 'object-cover'} object-center group-hover:scale-105 transition-transform duration-300`}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
 
-          {/* Row 1 */}
-          <div className="flex gap-[32px] mb-[28px]">
-            {/* Box 1 */}
-            <div
-              className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
-              style={{ width: '561px', height: '299px' }}
-            >
-              <Image
-                src="/project3.png"
-                alt="Project 1"
-                fill
-                sizes="561px"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
+                  {/* Content Container */}
+                  <div className="p-5 md:p-6 space-y-4 flex flex-col flex-1">
+                    {/* Category Badge */}
+                    <div className="flex items-center justify-between">
+                      <span
+                        className="inline-block px-3 py-1.5 text-xs font-medium rounded-full
+                                   bg-[#00d4ff]/10 text-[#00d4ff] border border-[#00d4ff]/20"
+                      >
+                        {project.category}
+                      </span>
+                    </div>
 
-            {/* Box 2 */}
-            <div
-              className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
-              style={{ width: '764px', height: '379px' }}
-            >
-              <Image
-                src="/project2.png"
-                alt="Project 2"
-                fill
-                sizes="764px"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-          </div>
+                    {/* Title */}
+                    <h3
+                      className="font-instrument text-lg md:text-xl font-bold text-white tracking-wide
+                                 group-hover:text-[#7370ff] transition-colors duration-300"
+                    >
+                      {project.title}
+                    </h3>
 
-          {/* Row 2 - Positioned absolutely to match Figma */}
-          <div className="relative" style={{ height: '600px' }}>
-            {/* Box 3 */}
-            <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
-              style={{ width: '571px', height: '308px', top: '0px', left: '0px' }}
-            >
-              <Image
-                src="/project1.png"
-                alt="Project 3"
-                fill
-                sizes="571px"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
+                    {/* Short Description */}
+                    <p className="text-gray-400 text-sm leading-relaxed line-clamp-3 flex-1">
+                      {project.shortDescription}
+                    </p>
 
-            {/* Box 4 */}
-            <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
-              style={{ width: '444px', height: '289px', top: '75px', left: '596px' }}
-            >
-              <Image
-                src="/project4.png"
-                alt="Project 4"
-                fill
-                sizes="444px"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-
-            {/* Box 5 */}
-            <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
-              style={{ width: '355px', height: '496px', top: '80px', left: '1075px' }}
-            >
-              <Image
-                src="/project5.png"
-                alt="Project 5"
-                fill
-                sizes="355px"
-                className="object-cover object-top"
-                unoptimized
-              />
-            </div>
-
-            {/* Box 6 */}
-            <div
-              className="absolute bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer overflow-hidden"
-              style={{ width: '466px', height: '251px', top: '337px', left: '0px' }}
-            >
-              <Image
-                src="/project6.jpg"
-                alt="Project 6"
-                fill
-                sizes="466px"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-
-            {/* Box 7 - Agency Message */}
-            <div
-              className="absolute bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-[14px] border border-[#7370FF] shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.5)] transition-all flex flex-col items-center justify-center p-8 text-center"
-              style={{ width: '548px', height: '195px', top: '393px', left: '494px' }}
-            >
-              <h3 className="font-instrument font-semibold text-[28px] leading-[32px] tracking-[-1px] bg-clip-text text-transparent bg-gradient-to-r from-[#FFFFFF] via-[#9C99FF] to-[#FFFFFF] mb-3">
-                Crafting Digital Excellence
-              </h3>
-              <p className="font-inter text-[15px] leading-[22px] text-[#CCCCCC] max-w-[450px]">
-                Where strategy meets artistry. We transform ambitious visions into unforgettable digital experiences.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Mobile/Tablet Responsive Grid */}
-        <div className="block lg:hidden px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Project 1 */}
-            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
-              <Image
-                src="/project3.png"
-                alt="Project 1"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-            {/* Project 2 */}
-            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
-              <Image
-                src="/project2.png"
-                alt="Project 2"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-            {/* Project 3 */}
-            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
-              <Image
-                src="/project1.png"
-                alt="Project 3"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-            {/* Project 4 */}
-            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
-              <Image
-                src="/project4.png"
-                alt="Project 4"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-            {/* Project 5 */}
-            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
-              <Image
-                src="/project5.png"
-                alt="Project 5"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-top"
-                unoptimized
-              />
-            </div>
-            {/* Project 6 */}
-            <div className="relative bg-black rounded-[14px] border border-black shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.4)] transition-all cursor-pointer h-[250px] overflow-hidden">
-              <Image
-                src="/project6.jpg"
-                alt="Project 6"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                unoptimized
-              />
-            </div>
-            {/* Agency Message Box */}
-            <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-[14px] border border-[#7370FF] shadow-[0px_0px_0px_8px_rgba(115,112,255,0.3)] hover:shadow-[0px_0px_0px_12px_rgba(115,112,255,0.5)] transition-all flex flex-col items-center justify-center p-6 text-center h-[250px]">
-              <h3 className="font-instrument font-semibold text-[22px] leading-[28px] tracking-[-1px] bg-clip-text text-transparent bg-gradient-to-r from-[#FFFFFF] via-[#9C99FF] to-[#FFFFFF] mb-3">
-                Crafting Digital Excellence
-              </h3>
-              <p className="font-inter text-[14px] leading-[20px] text-[#CCCCCC]">
-                Where strategy meets artistry. We transform ambitious visions into unforgettable digital experiences.
-              </p>
-            </div>
+                    {/* Technology Tags */}
+                    <div className="flex flex-wrap gap-2 pt-2">
+                      {project.tags.slice(0, 3).map((tag, i) => (
+                        <span
+                          key={i}
+                          className="px-2.5 py-1 text-[10px] md:text-xs font-medium rounded-md
+                                     bg-[#1a1a1a] text-gray-300 border border-[#2a2a2a]
+                                     hover:bg-[#7370ff]/10 hover:border-[#7370ff]/30 hover:text-[#7370ff]
+                                     transition-all duration-200"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
           </div>
         </div>
-
       </section>
 
       {/* Services Section */}
@@ -307,7 +186,7 @@ export default function Home() {
 
             {/* Right Column - Custom Gradient Visual */}
             <FadeIn delay={0.4} direction="right">
-              <div className="flex justify-center lg:justify-end">
+              <div className="hidden md:flex justify-center lg:justify-end">
               <div className="relative w-[600px] h-[400px] rounded-lg overflow-hidden">
                 {/* Animated Gradient Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#7370FF] via-[#9C99FF] to-[#1a1a40] opacity-90"></div>
@@ -660,7 +539,7 @@ export default function Home() {
 
           {/* Subtitle */}
           <p className="font-inter font-normal text-[17.6px] leading-[28px] text-[#999999] text-center mb-12">
-            Got other questions? Reach out in our<span className="font-semibold text-[#999999]">Discord</span>.
+            Got other questions? <span className="font-semibold text-[#999999]">Contact us</span> for more information.
           </p>
           </FadeIn>
 
@@ -674,7 +553,7 @@ export default function Home() {
                 +
               </div>
               <p className="text-white text-[16px] md:text-[18px] font-normal">
-                How is Reweb different than tools like Framer or Webflow?
+                What services do you offer?
               </p>
             </div>
 
@@ -684,7 +563,7 @@ export default function Home() {
                 +
               </div>
               <p className="text-white text-[16px] md:text-[18px] font-normal">
-                What is the learning curve for Reweb?
+                How long does a typical project take?
               </p>
             </div>
 
@@ -694,7 +573,7 @@ export default function Home() {
                 +
               </div>
               <p className="text-white text-[16px] md:text-[18px] font-normal">
-                Is the generated code high quality?
+                Do you provide ongoing support and maintenance?
               </p>
             </div>
 
@@ -704,7 +583,7 @@ export default function Home() {
                 +
               </div>
               <p className="text-white text-[16px] md:text-[18px] font-normal">
-                Do you plan to add more sections and templates?
+                Can you integrate AI and automation into my project?
               </p>
             </div>
 
@@ -714,7 +593,7 @@ export default function Home() {
                 +
               </div>
               <p className="text-white text-[16px] md:text-[18px] font-normal">
-                Can I import my own components?
+                What is your pricing model?
               </p>
             </div>
 
