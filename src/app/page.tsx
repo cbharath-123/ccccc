@@ -33,7 +33,7 @@ export default function Home() {
         {/* Mobile Button - "Call us" */}
         <button 
           className="md:hidden glass-navbar glass-border relative w-[161px] h-[43px] flex items-center justify-center text-white text-sm font-medium transition-transform hover:scale-105"
-          onClick={() => window.location.href = 'tel:+1234567890'}
+          onClick={() => window.open('https://calendly.com/suriavula711/30min', '_blank')}
         >
           Call us
         </button>
