@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import CallButton from "@/components/CallButton";
 import FadeIn from "@/components/FadeIn";
+import FAQ from "@/components/FAQ";
 import { projects } from "@/data/projects";
 
 export default function Home() {
@@ -545,59 +546,7 @@ export default function Home() {
 
           {/* FAQ Items */}
           <FadeIn delay={0.2}>
-            <div className="max-w-[768px] mx-auto space-y-4">
-
-            {/* FAQ Item 1 */}
-            <div className="bg-[#1a1a1a] rounded-[12px] p-6 flex items-center gap-4 hover:bg-[#222222] transition-all cursor-pointer">
-              <div className="w-6 h-6 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[20px]">
-                +
-              </div>
-              <p className="text-white text-[16px] md:text-[18px] font-normal">
-                What services do you offer?
-              </p>
-            </div>
-
-            {/* FAQ Item 2 */}
-            <div className="bg-[#1a1a1a] rounded-[12px] p-6 flex items-center gap-4 hover:bg-[#222222] transition-all cursor-pointer">
-              <div className="w-6 h-6 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[20px]">
-                +
-              </div>
-              <p className="text-white text-[16px] md:text-[18px] font-normal">
-                How long does a typical project take?
-              </p>
-            </div>
-
-            {/* FAQ Item 3 */}
-            <div className="bg-[#1a1a1a] rounded-[12px] p-6 flex items-center gap-4 hover:bg-[#222222] transition-all cursor-pointer">
-              <div className="w-6 h-6 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[20px]">
-                +
-              </div>
-              <p className="text-white text-[16px] md:text-[18px] font-normal">
-                Do you provide ongoing support and maintenance?
-              </p>
-            </div>
-
-            {/* FAQ Item 4 */}
-            <div className="bg-[#1a1a1a] rounded-[12px] p-6 flex items-center gap-4 hover:bg-[#222222] transition-all cursor-pointer">
-              <div className="w-6 h-6 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[20px]">
-                +
-              </div>
-              <p className="text-white text-[16px] md:text-[18px] font-normal">
-                Can you integrate AI and automation into my project?
-              </p>
-            </div>
-
-            {/* FAQ Item 5 */}
-            <div className="bg-[#1a1a1a] rounded-[12px] p-6 flex items-center gap-4 hover:bg-[#222222] transition-all cursor-pointer">
-              <div className="w-6 h-6 rounded-full bg-[#7370FF] flex items-center justify-center text-white text-[20px]">
-                +
-              </div>
-              <p className="text-white text-[16px] md:text-[18px] font-normal">
-                What is your pricing model?
-              </p>
-            </div>
-
-          </div>
+            <FAQ />
           </FadeIn>
 
 

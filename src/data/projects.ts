@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "luxury-awaits",
-    title: "TRAVEL WEBSITE",
+    title: "DESTINIQUE",
     category: "Branding",
     shortDescription: "Handpicked destinations for extraordinary travelers. A curated collection of exclusive resorts and experiences.",
     fullDescription:
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     shortDescription: "Next-gen intelligent assistant capable of complex task automation. Jarvis leverages advanced NLP to understand context and execute multi-step workflows with precision.",
     fullDescription:
       "Jarvis AI Agent is an intelligent virtual assistant that combines natural language processing, voice recognition, and machine learning to provide personalized assistance and automation.",
-    image: "/projects/Gemini_Generated_Image_wy4uvkwy4uvkwy4u.png",
+    image: "/projects/disygo.jpg",
     tags: ["TypeScript", "Gemini API", "Speech Recognition", "NLP", "Docker", "Node.js"],
     link: "#",
   },
@@ -49,7 +49,7 @@ export const projects: Project[] = [
   },
   {
     id: "chatbot-ai",
-    title: "CHATBOT AI",
+    title: "POLICYPILOT",
     category: "Branding",
     shortDescription: "Elegant brand identity for lifestyle brand",
     fullDescription:
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   },
   {
     id: "design-frontend",
-    title: "DESIGN FRONTEND",
+    title: "NEXORA",
     category: "Branding",
     shortDescription: "Modern retail brand identity and design system",
     fullDescription:
